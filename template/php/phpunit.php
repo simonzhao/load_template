@@ -26,6 +26,24 @@
  */
 class ${ClassName} extends PHPUnit_Framework_TestCase 
 {
+	/**
+	 * 测试环境准备 
+	 * 
+	 * @return void 
+	 */
+	public function setUp() {
+
+	}
+
+	/**
+	 * 测试环境清理 
+	 * 
+	 * @return void 
+	 */
+	public function tearDown() {
+
+	}
+
     /**
      * 测试用例 
      *
