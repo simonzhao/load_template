@@ -1,0 +1,105 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId> </groupId>
+    <artifactId> </artifactId>
+    <version> </version>
+    <packaging>pom</packaging>
+
+    <name></name>
+    <description></description>
+    <url></url>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+
+        <!-- SCM -->
+        <scm.type>git</scm.type>
+        <scm.connection></scm.connection>
+        <scm.developerConnection></scm.developerConnection>
+        
+        <!-- CI Management -->
+        <ciManagement.system></ciManagement.system>
+        <ciManagement.url></ciManagement.url>
+
+        <!-- Issue Management -->
+        <issueManagement.system></issueManagement.system>
+        <issueManagement.url></issueManagement.url>
+
+        <!--站点发布配置-->
+        <distributionManagement.site.id></distributionManagement.site.id>
+        <distributionManagement.site.host></distributionManagement.site.host>
+        <distributionManagement.site.path></distributionManagement.site.path>
+
+        <!--正式发布仓库配置-->
+        <distributionManagement.releaseRepository.id></distributionManagement.releaseRepository.id>
+        <distributionManagement.releaseRepository.name></distributionManagement.releaseRepository.name>
+        <distributionManagement.releaseRepository.host></distributionManagement.releaseRepository.host>
+
+        <!--快照发布仓库配置-->
+        <distributionManagement.snapshotRepository.id></distributionManagement.snapshotRepository.id>
+        <distributionManagement.snapshotRepository.name></distributionManagement.snapshotRepository.name>
+        <distributionManagement.snapshotRepository.host></distributionManagement.snapshotRepository.host>
+
+    </properties>
+
+    <scm>
+        <connection>scm:${scm.type}:${scm.connection}</connection>
+        <developerConnection>scm:${scm.type}:${scm.developerConnection}</developerConnection>
+        <tag>HEAD</tag>
+    </scm>
+
+    <licenses>
+    </licenses>
+
+    <developers>
+    </developers>
+
+    <ciManagement>
+        <system>${ciManagement.system}</system>
+        <url>${ciManagement.url}</url>
+    </ciManagement>
+
+    <!--缺陷跟踪与项目管理-->
+    <issueManagement>
+        <system>${issueManagement.system}</system>
+        <url>${issueManagement.url}</url>
+    </issueManagement>
+
+    <distributionManagement>                                                       
+        <site>
+            <id>${distributionManagement.site.id}</id>
+            <url>scp://${distributionManagement.site.host}/${distributionManagement.site.path}</url>
+        </site>
+        <repository>                                                               
+            <id>${distributionManagement.releaseRepository.id}</id>
+            <name>${distributionManagement.releaseRepository.name}</name>                                
+            <url>http://${distributionManagement.releaseRepository.host}/nexus/content/repositories/releases/</url>
+        </repository>                                                              
+        <snapshotRepository>                                                       
+            <id>${distributionManagement.snapshotRepository.id}</id>                                               
+            <name>${distributionManagement.snapshotRepository.name}</name>                                
+            <url>http://${distributionManagement.snapshotRepository.host}/nexus/content/repositories/snapshots/</url>
+        </snapshotRepository>                                                      
+    </distributionManagement>
+
+
+    <dependencyManagement>
+        <dependencies>
+        </dependencies>
+    </dependencyManagement>
+
+    <build>
+        <pluginManagement>
+            <plugins>
+            </plugins>
+        </pluginManagement>
+    </build>
+
+    <reporting>
+        <plugins>
+        </plugins>
+    </reporting>
+</project>
